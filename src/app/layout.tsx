@@ -22,8 +22,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'CREATEDBYMASE | byMase + Greenhaus',
-  description: 'Two worlds, one vision. byMase — clothes that speak. Greenhaus — accessories and custom home decoration.',
+  title: 'CREATEDBYMASE | Creative Direction + Concept Work',
+  description: 'Creative direction, video production, and concept work by Mase. Sample treatments, brand films, and visual identity.',
 };
 
 export default function RootLayout({

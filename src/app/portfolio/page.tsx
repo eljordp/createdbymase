@@ -2,12 +2,12 @@ import { getProjectsByCategory } from '@/data/projects';
 import ProjectCard from '@/components/ProjectCard';
 
 export const metadata = {
-  title: 'byMASE | Videos + Creative Direction — CREATEDBYMASE',
-  description: 'Music videos, brand films, commercials, and creative direction by Mase.',
+  title: 'PORTFOLIO | Concept Work — CREATEDBYMASE',
+  description: 'Brand concepts, art direction, event design, and visual identity by Mase.',
 };
 
-export default function ByMasePage() {
-  const projects = getProjectsByCategory('bymase');
+export default function PortfolioPage() {
+  const projects = getProjectsByCategory('portfolio');
   const types = [...new Set(projects.map((p) => p.type))];
 
   return (
@@ -18,10 +18,10 @@ export default function ByMasePage() {
           <div className="flex items-end justify-between mb-2">
             <div>
               <div className="font-mono text-[9px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.3em] text-muted mb-3 sm:mb-4">
-                [ 001 — VIDEOS + CREATIVE DIRECTION ]
+                [ 002 — CONCEPT WORK ]
               </div>
-              <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold tracking-tighter text-accent-mase">
-                byMASE
+              <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold tracking-tighter text-accent-green">
+                PORTFOLIO
               </h1>
             </div>
             <div className="hidden md:block font-mono text-[10px] text-muted tracking-wider text-right">
@@ -30,31 +30,11 @@ export default function ByMasePage() {
             </div>
           </div>
           <p className="text-muted text-xs sm:text-sm max-w-lg mt-3 sm:mt-4">
-            Sample treatments, music videos, brand films, and creative direction.
-            Every project starts with a vision and ends with something you can feel.
+            Concept work for brands, artists, and events. From identity systems to
+            campaign strategies — this is where ideas take shape.
           </p>
           <div className="md:hidden font-mono text-[9px] text-muted tracking-wider mt-3">
             {projects.length} PROJECTS — OPEN FOR WORK
-          </div>
-        </div>
-      </section>
-
-      {/* Reel placeholder */}
-      <section className="border-b border-border">
-        <div className="scanlines relative h-48 sm:h-64 md:h-96 bg-surface flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-[linear-gradient(45deg,#111_25%,transparent_25%,transparent_75%,#111_75%)] bg-[length:4px_4px]" />
-          <div className="relative text-center px-4">
-            <div className="font-mono text-[9px] sm:text-[10px] tracking-[0.3em] text-accent-mase mb-2 sm:mb-3">
-              REEL.MP4
-            </div>
-            <div className="w-16 h-16 mx-auto mb-4 rounded-full border-2 border-accent-mase/30 flex items-center justify-center hover:bg-accent-mase/10 transition-colors cursor-pointer">
-              <svg className="w-6 h-6 text-accent-mase ml-1" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </div>
-            <p className="text-muted text-[10px] sm:text-xs font-mono">
-              // DEMO REEL COMING SOON
-            </p>
           </div>
         </div>
       </section>
@@ -86,15 +66,15 @@ export default function ByMasePage() {
       {/* CTA */}
       <section className="border-t border-border px-4 sm:px-6 py-16 sm:py-24">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="font-mono text-[9px] sm:text-[10px] tracking-[0.3em] text-accent-mase mb-4 sm:mb-6">
-            LET&apos;S WORK
+          <div className="font-mono text-[9px] sm:text-[10px] tracking-[0.3em] text-accent-green mb-4 sm:mb-6">
+            LET&apos;S CREATE
           </div>
           <h2 className="text-xl sm:text-2xl md:text-4xl font-bold tracking-tight leading-tight mb-6 sm:mb-8">
-            Got a project? Let&apos;s make it happen.
+            Got concept work that needs a creative eye?
           </h2>
           <a
             href="mailto:createdbymase@gmail.com"
-            className="inline-block bg-accent-mase text-white font-mono font-bold text-sm tracking-widest px-8 py-4 rounded hover:opacity-90 transition-opacity"
+            className="inline-block bg-accent-green text-black font-mono font-bold text-sm tracking-widest px-8 py-4 rounded hover:opacity-90 transition-opacity"
           >
             GET IN TOUCH
           </a>
