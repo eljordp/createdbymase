@@ -11,16 +11,16 @@ export default function ByMasePage() {
   const categories = [...new Set(products.map((p) => p.category))];
 
   return (
-    <div className="min-h-screen pt-[100px]">
+    <div className="min-h-screen pt-[52px] sm:pt-[100px]">
       {/* Hero */}
-      <section className="px-6 pb-16 border-b border-border">
+      <section className="px-4 sm:px-6 py-8 sm:pb-16 border-b border-border">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-end justify-between mb-2">
             <div>
-              <div className="font-mono text-[10px] tracking-[0.3em] text-muted mb-4">
+              <div className="font-mono text-[9px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.3em] text-muted mb-3 sm:mb-4">
                 [ 001 — CLOTHES ]
               </div>
-              <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-accent-mase">
+              <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold tracking-tighter text-accent-mase">
                 byMASE
               </h1>
             </div>
@@ -29,25 +29,29 @@ export default function ByMasePage() {
               <div>COLLECTION 001</div>
             </div>
           </div>
-          <p className="text-muted text-sm max-w-lg mt-4">
+          <p className="text-muted text-xs sm:text-sm max-w-lg mt-3 sm:mt-4">
             Streetwear built from intention. Heavy fabrics, clean lines, no noise.
             Every piece is designed to be worn, not displayed.
           </p>
+          {/* Mobile item count */}
+          <div className="md:hidden font-mono text-[9px] text-muted tracking-wider mt-3">
+            {products.length} ITEMS — COLLECTION 001
+          </div>
         </div>
       </section>
 
       {/* Lookbook banner */}
       <section className="border-b border-border">
-        <div className="scanlines relative h-64 md:h-96 bg-surface flex items-center justify-center overflow-hidden">
+        <div className="scanlines relative h-48 sm:h-64 md:h-96 bg-surface flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 bg-[linear-gradient(45deg,#111_25%,transparent_25%,transparent_75%,#111_75%)] bg-[length:4px_4px]" />
-          <div className="relative text-center">
-            <div className="font-mono text-[10px] tracking-[0.3em] text-accent-mase mb-3">
+          <div className="relative text-center px-4">
+            <div className="font-mono text-[9px] sm:text-[10px] tracking-[0.3em] text-accent-mase mb-2 sm:mb-3">
               LOOKBOOK.ZIP
             </div>
-            <p className="text-3xl md:text-5xl font-bold tracking-tight">
+            <p className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight">
               COMING SOON
             </p>
-            <p className="text-muted text-xs mt-3 font-mono">
+            <p className="text-muted text-[10px] sm:text-xs mt-2 sm:mt-3 font-mono">
               // PHOTOS + VIDEO DROPPING SOON
             </p>
           </div>
@@ -55,17 +59,17 @@ export default function ByMasePage() {
       </section>
 
       {/* Products */}
-      <section className="px-6 py-16">
+      <section className="px-4 sm:px-6 py-10 sm:py-16">
         <div className="max-w-7xl mx-auto">
           {/* Category filters */}
-          <div className="flex items-center gap-4 mb-12 overflow-x-auto pb-2">
-            <button className="font-mono text-xs tracking-widest text-fg bg-subtle px-4 py-2 rounded-full whitespace-nowrap">
+          <div className="flex items-center gap-2 sm:gap-4 mb-8 sm:mb-12 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-none">
+            <button className="font-mono text-[10px] sm:text-xs tracking-widest text-fg bg-subtle px-3 sm:px-4 py-2 rounded-full whitespace-nowrap min-h-[36px]">
               ALL
             </button>
             {categories.map((cat) => (
               <button
                 key={cat}
-                className="font-mono text-xs tracking-widest text-muted hover:text-fg px-4 py-2 rounded-full whitespace-nowrap transition-colors"
+                className="font-mono text-[10px] sm:text-xs tracking-widest text-muted hover:text-fg px-3 sm:px-4 py-2 rounded-full whitespace-nowrap transition-colors min-h-[36px]"
               >
                 {cat.toUpperCase()}
               </button>
@@ -73,7 +77,7 @@ export default function ByMasePage() {
           </div>
 
           {/* Product grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8">
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -82,15 +86,15 @@ export default function ByMasePage() {
       </section>
 
       {/* Brand statement */}
-      <section className="border-t border-border px-6 py-24">
+      <section className="border-t border-border px-4 sm:px-6 py-16 sm:py-24">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="font-mono text-[10px] tracking-[0.3em] text-accent-mase mb-6">
+          <div className="font-mono text-[9px] sm:text-[10px] tracking-[0.3em] text-accent-mase mb-4 sm:mb-6">
             THE PHILOSOPHY
           </div>
-          <blockquote className="text-2xl md:text-4xl font-bold tracking-tight leading-tight mb-8">
+          <blockquote className="text-xl sm:text-2xl md:text-4xl font-bold tracking-tight leading-tight mb-6 sm:mb-8">
             &ldquo;Wear what you mean. Mean what you wear.&rdquo;
           </blockquote>
-          <p className="text-muted text-sm max-w-md mx-auto">
+          <p className="text-muted text-xs sm:text-sm max-w-md mx-auto">
             byMase isn&apos;t about trends. It&apos;s about identity.
             Every thread, every stitch, every decision is made with purpose.
           </p>

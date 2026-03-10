@@ -119,3 +119,26 @@ body {
   content: '_';
   animation: blink 1s step-end infinite;
 }
+
+/* Hide scrollbar on horizontal scroll areas */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mobile touch optimizations */
+@media (hover: none) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Safe area insets for notched phones */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .fixed.bottom-0 {
+    padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+  }
+}
